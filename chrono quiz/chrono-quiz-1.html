@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var question1 = "In what year did the titanic sink?"
+        var question2 = "In what year did WW1 begin"
+        var question3 = "In what year was the qualification of Women act pass?"
+
+        var answer1 = 1912
+        var answer2 = 1914
+        var answer3 = 1918
+
+        for (let i = 0; i <= 3; i++){
+            switch(i){
+                case 1:
+                    answer = prompt(question1);
+                    if(answer != answer1){
+                        alert("Incorrect");
+                    }
+                    break;
+                case 2: 
+                    answer = prompt(question2);
+                    if(answer != answer2){
+                        alert("Incorrect");
+                    }
+                    break;
+                case 3: 
+                    answer = prompt(question3);
+                    if(answer != answer3){
+                        alert("Incorrect");
+                    }
+                    break;
+                default:
+                    console.log("ERROR");   
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Switch used with Select statement</h1>
+    <select id="select">
+        <option value="1">Burger Only</option>
+        <option value="2">Burger and fries</option>
+        <option value="3">Burger, drink and fries</option>
+    </select>
+    <script>
+        let mealDeal = document.querySelector('#select').value;
+        switch(mealDeal){
+        case "3":
+            console.log("Drink");
+        case "2":
+            console.log("Fries");
+        case "1":
+            console.log("Burger");   
+        default: //like else
+            console.log("Thanks you");    
+} //end of switch statement
+    </script>
+</body>
+</html>

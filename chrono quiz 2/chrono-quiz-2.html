@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var questions = [["In what year did the titanic sink?"], ["In what year did WW1 begin"], ["In what year was the qualification of Women act pass?"]]
+        var answers = [[1912], [1914], [1918]]
+
+
+        function process(i){
+            answer = prompt(questions[i]);
+            if(answer != answers[i]){
+                alert("Incorrect");
+            } else {
+                console.log("CORRECT")
+            }
+        }
+
+        
+        
+        for (let i = 0; i <= 3; i++){
+            switch(i){
+                case 1:
+                    process(0);
+                    break;
+                case 2: 
+                    process(1);
+                    break;
+                case 3: 
+                    process(2);
+                    break;
+                default:
+                    console.log("ERROR");   
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

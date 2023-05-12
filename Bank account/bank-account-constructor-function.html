@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Account(name, number, balance){
+            this.name = name;
+            this.number = number;
+            this.balance = balance;
+        };
+        Account.prototype.deposit = function(amount){
+            this.balance += amount;
+        };
+        Account.prototype.withdraw = function(amount){
+            this.balance -= amount;
+        };
+
+        var a1 = new Account('frid', 1001, 20.00);
+        var a2 = new Account('fgfsdrid', 1002, 20.00);
+
+        a1.display = function(){
+            alert(`Account name: ${this.name}\nBalance: ${this.balance.toFixed(2)}`);
+        };
+
+        a1.display();
+
+        Account.prototype.display = function(){
+            alert(`Account name: ${this.name}\nBalance: ${this.balance.toFixed(2)}`);
+        }
+
+        a2.display();
+
+    </script>
+</body>
+</html>

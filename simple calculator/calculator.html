@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="firstNum">Enter your first num: </label><input type="text" id="firstNum" autofocus>
+    <label for="secondNum">Enter your second num: </label><input type="text" id="secondNum" autofocus>
+    <label for="operator">Enter your operator: </label><input type="text" id="operator" autofocus>
+    <label for="submit"><button id="submit">submit</button></label>
+
+    <p id="result"></p>
+    <script>  
+    
+    document.querySelector('#submit').addEventListener('click', calculate);
+    
+    function calculate() {
+        var firstNum = Number(document.querySelector('#firstNum').value)
+        var secondNum = Number(document.querySelector('#secondNum').value)
+        var operator = document.querySelector('#operator').value
+        var result = 0
+        switch(operator){
+            case '+':
+                result = firstNum + secondNum;
+                break;
+            case '-':
+                result = firstNum - secondNum;
+                break;
+            case '/':
+                result = firstNum / secondNum;
+                break;
+            case '*':
+                result = firstNum * secondNum;
+                break;
+            default:
+                console.log("Invalid operator");   
+        }
+        document.querySelector('#result').innerHTML = `the result is = ${result}`;
+    }
+    </script>
+</body>
+</html>
