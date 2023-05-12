@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASIC TAGS</title>
+    <style>
+        /* CSS in here */
+        /* SELECTORS - every element with this element level */
+        h2{
+            color: brown;
+        }
+        /* SELECTORS - every element with this class applied */
+        .tracked-out{
+            letter-spacing: 0.25em;
+        }
+        /* SELECTORS - only element with this ID applied */
+        /* highest level of specificity in styles, also handy for scripts */
+        #name{
+            background-color: rgba(126, 59, 59, 0.644);
+        }
+    </style>
+</head>
+<body>
+    <h1>Basic HTML Tags</h1>
+    <h2>And CSS Selectors</h2>
+    <p class="tracked-out">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem deserunt, culpa blanditiis modi distinctio odit nemo? Expedita quos voluptate libero quidem eligendi corrupti, neque, suscipit maxime modi perferendis beatae adipisci.</p>
+    <h2>and</h2>
+    <p id="welcome">Enter your name below</p>
+    <label for="name">Enter your name: </label><input type="text" id="name" autofocus>
+    <label for="submit"><button id="submit">submit</button></label>
+    <table>
+        <tr>
+            <th>Delegate ID</th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>1234</td>
+            <td id="username"></td>
+        </tr>
+    </table>
+    
+</body>
+<script>
+    function getAndDisplayName() {
+        var name = document.querySelector('#name').value;
+        document.querySelector('#welcome').innerHTML = 'Welcome to my site, ' + name;
+        document.querySelector('#username').innerHTML = name;
+    }
+    document.querySelector('#submit').addEventListener('click', getAndDisplayName);
+</script>
+</html> 
